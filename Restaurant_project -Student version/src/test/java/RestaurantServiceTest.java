@@ -72,9 +72,8 @@ class RestaurantServiceTest {
 
     //<<<<<<<<<<<<<<<<<<<<CALCULATE ORDER>>>>>>>>>>>>>>>>>>>>>>>>>>//
     @Test
-    public void adding_items_should_calculate_correct_order_value()
-    {
-        List<String> itemsToOrder= new ArrayList<>(Arrays.asList("Coffe","Vegetable lasagne"));
+    public void adding_items_should_calculate_correct_order_value() throws restaurantNotFoundException {
+        List<String> itemsToOrder= new ArrayList<>(Arrays.asList("Coffee","Vegetable lasagne"));
         int orderValue=service.calculateOrder(restaurant.getName(),itemsToOrder);
         assertEquals(orderValue,419);
     }
